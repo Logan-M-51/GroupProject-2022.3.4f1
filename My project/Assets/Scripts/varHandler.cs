@@ -45,8 +45,6 @@ public class varHandler : MonoBehaviour
         {
             flag_text.text = "false";
         }
-        Debug.Log(flag_text.text);
-        //flag_text.ForceMeshUpdate(true);
     }
 
     public void incrementI()
@@ -98,5 +96,25 @@ public class varHandler : MonoBehaviour
     public void updateK()
     {
         k_text.text = player_k.ToString();
+    }
+
+    public int getI()
+    {
+        return player_i; 
+    }
+
+    public int getJ()
+    {
+        return player_j;
+    }
+
+    public int getK()
+    {
+        return player_k;
+    }
+
+    public bool getFlag()
+    {
+        return player_flag;
     }
 }

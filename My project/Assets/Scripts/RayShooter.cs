@@ -32,6 +32,7 @@ public class RayShooter : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
+                Handheld.Vibrate();
                 StartCoroutine(SphereIndicator(hit.point));
             }
         }

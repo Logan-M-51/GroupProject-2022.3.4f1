@@ -9,8 +9,11 @@ public class varHandler : MonoBehaviour
     public bool player_flag;
     public TextMeshProUGUI flag_text;
     public int player_i;
+    public TextMeshProUGUI i_text;
     public int player_j;
+    public TextMeshProUGUI j_text;
     public int player_k;
+    public TextMeshProUGUI k_text;
     void Start()
     {
         player_flag = false;
@@ -49,30 +52,51 @@ public class varHandler : MonoBehaviour
     public void incrementI()
     {
         player_i++;
+        updateI();
     }
 
     public void incrementJ()
     {
         player_j++;
+        updateJ();
     }
 
     public void incrementK()
     {
         player_k++;
+        updateK();
     }
 
     public void decrementI()
     {
         player_i--;
+        updateI();
     }
 
     public void decrementJ()
     {
         player_j--;
+        updateJ();
     }
 
     public void decrementK()
     {
         player_k--;
+        updateK();
+    }
+
+    public void updateI()
+    {
+        i_text.text = player_i.ToString();
+    }
+
+    public void updateJ()
+    {
+        j_text.text = player_j.ToString();
+    }
+
+    public void updateK()
+    {
+        k_text.text = player_k.ToString();
     }
 }

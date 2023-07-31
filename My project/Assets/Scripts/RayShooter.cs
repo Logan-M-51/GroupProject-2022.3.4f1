@@ -26,16 +26,25 @@ public class RayShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) &&
-            !EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 point = new Vector3(cam.pixelWidth / 2, cam.pixelHeight / 2, 0);
             Ray ray = cam.ScreenPointToRay(point);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
+                GameObject hitObject = hit.transform.gameObject;
+                CodeView code = hitObject.GetComponent<CodeView>();
+                if (code != null)
+                {
+                    code.ChangeView();
+                } else
+                {
+                    StartCoroutine(SphereIndicator(hit.point));
+                }
+
                 Handheld.Vibrate();
-                StartCoroutine(SphereIndicator(hit.point));
+                
             }
         }
     }

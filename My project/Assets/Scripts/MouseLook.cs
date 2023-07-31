@@ -10,7 +10,7 @@ public class MouseLook : MonoBehaviour
         MouseX = 1,
         MouseY = 2
     }
-    public RotationAxes axes = RotationAxes.MouseXAndY;
+    public RotationAxes axes = RotationAxes.MouseX;
 
     public float sensitivityHor = 9.0f;
     public float sensitivityVert = 9.0f;
@@ -48,13 +48,29 @@ public class MouseLook : MonoBehaviour
         }
         else
         {
-            verticalRot -= Input.GetAxis("Mouse Y") * sensitivityVert;
+            
+                verticalRot -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                verticalRot = Mathf.Clamp(verticalRot, minimumVert, maximumVert);
+
+                float delta = Input.GetAxis("Mouse X") * sensitivityHor;
+                float horizontalRot = transform.localEulerAngles.y + delta;
+
+                transform.localEulerAngles = new Vector3(verticalRot, horizontalRot, 0);
+         
+            
+
+
+        /*
+            // code from MST
+            float mouseX = Input.GetAxis("Mouse X") * sensitivityHor * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * sensitivityVert * Time.deltaTime;
+            verticalRot -= mouseY;
             verticalRot = Mathf.Clamp(verticalRot, minimumVert, maximumVert);
 
-            float delta = Input.GetAxis("Mouse X") * sensitivityHor;
-            float horizontalRot = transform.localEulerAngles.y + delta;
+            transform.localRotation = Quaternion.Euler(verticalRot, 0f, 0f);
+            playerBody.Rotate(Vector3.up * mouseX);
+        */
 
-            transform.localEulerAngles = new Vector3(verticalRot, horizontalRot, 0);
         }
     }
 }

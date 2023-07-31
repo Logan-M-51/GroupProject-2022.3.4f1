@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.XR;
 
 public class RayShooter : MonoBehaviour
 {
@@ -11,16 +12,19 @@ public class RayShooter : MonoBehaviour
     {
         cam = GetComponent<Camera>();
 
-     //   Cursor.lockState = CursorLockMode.Locked;
-     //   Cursor.visible = false;
     }
 
     private void OnGUI()
     {
         int size = 12;
-        float posX = cam.pixelWidth / 2 - size / 4;
-        float posY = cam.pixelHeight / 2 - size / 2;
-        GUI.Label(new Rect(posX, posY, size, size), "*");
+        // This code is for Game View
+           float posX = cam.pixelWidth / 2 - size / 4;
+           float posY = cam.pixelHeight / 2 - size / 2;
+
+        // This code is for VR view
+     //   float posX = XRSettings.eyeTextureWidth / 2 - size / 4;
+     //   float posY = XRSettings.eyeTextureHeight / 2 - size / 2;
+        GUI.Label(new Rect(posX, posY, size, size), "+");
     }
 
     // Update is called once per frame
@@ -28,8 +32,11 @@ public class RayShooter : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            
             Vector3 point = new Vector3(cam.pixelWidth / 2, cam.pixelHeight / 2, 0);
+         //   Vector3 point = new Vector3(XRSettings.eyeTextureWidth / 2, XRSettings.eyeTextureHeight / 2, 0);
             Ray ray = cam.ScreenPointToRay(point);
+            Debug.DrawRay(ray.origin, ray.direction, Color.red);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
@@ -38,12 +45,12 @@ public class RayShooter : MonoBehaviour
                 if (code != null)
                 {
                     code.ChangeView();
+
                 } else
                 {
                     StartCoroutine(SphereIndicator(hit.point));
+                    Handheld.Vibrate();
                 }
-
-                Handheld.Vibrate();
                 
             }
         }

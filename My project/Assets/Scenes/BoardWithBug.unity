@@ -1207,7 +1207,6 @@ GameObject:
   - component: {fileID: 168411852}
   - component: {fileID: 168411851}
   - component: {fileID: 168411853}
-  - component: {fileID: 168411854}
   m_Layer: 0
   m_Name: Minecart
   m_TagString: Untagged
@@ -1295,20 +1294,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &168411854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168411849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24355691309bd4d41999aacd396ffd93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  gravity: -9.8
 --- !u!1 &212555195
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,7 +3836,7 @@ GameObject:
   - component: {fileID: 474887352}
   - component: {fileID: 474887351}
   - component: {fileID: 474887350}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bypass Loop 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3865,7 +3850,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474887348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 53.669804, y: 0, z: 25.387066}
   m_LocalScale: {x: 1, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6865,12 +6850,13 @@ Transform:
   - {fileID: 1581993412}
   - {fileID: 168411850}
   - {fileID: 1306363213}
+  - {fileID: 1033122778}
+  - {fileID: 367537916}
   - {fileID: 2135320342}
   - {fileID: 528587730}
-  - {fileID: 367537916}
   - {fileID: 1361694423}
-  - {fileID: 835597021}
   - {fileID: 474887349}
+  - {fileID: 835597021}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9802,7 +9788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbea3f01eefa2394d8a1247578cbc1cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 0
+  axes: 2
   sensitivityHor: 9
   sensitivityVert: 9
   minimumVert: -45
@@ -9955,8 +9941,8 @@ GameObject:
   - component: {fileID: 1033122776}
   - component: {fileID: 1033122775}
   - component: {fileID: 1033122774}
-  m_Layer: 0
-  m_Name: Spline
+  m_Layer: 3
+  m_Name: Intro Spline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10647,13 +10633,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033122773}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 29.899351, y: 0, z: -0.25}
   m_LocalScale: {x: 1, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 698344623}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1041241694
 GameObject:
@@ -12231,7 +12217,7 @@ GameObject:
   - component: {fileID: 1361694426}
   - component: {fileID: 1361694425}
   - component: {fileID: 1361694424}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bypass Loop 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

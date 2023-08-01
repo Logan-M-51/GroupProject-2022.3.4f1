@@ -36,7 +36,7 @@ public class RayShooter : MonoBehaviour
             Vector3 point = new Vector3(cam.pixelWidth / 2, cam.pixelHeight / 2, 0);
          //   Vector3 point = new Vector3(XRSettings.eyeTextureWidth / 2, XRSettings.eyeTextureHeight / 2, 0);
             Ray ray = cam.ScreenPointToRay(point);
-            Debug.DrawRay(ray.origin, ray.direction, Color.red);
+            
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {

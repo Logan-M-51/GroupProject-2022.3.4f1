@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class validateOpen : MonoBehaviour
+public class validateBypass : MonoBehaviour
 {
     varHandler handler;
 
@@ -11,10 +11,8 @@ public class validateOpen : MonoBehaviour
     public int k_field;
     public bool flag_field;
 
-    public MeshRenderer mesh;
-    public BoxCollider door_collider;
-
-    public Transform teleportationLocationn;
+    public AudioSource errorAudio;
+    public AudioSource successAudio;
 
     void Start()
     {
@@ -29,14 +27,13 @@ public class validateOpen : MonoBehaviour
             Debug.Log(validateFields());
             if (validateFields())
             {
-                door_collider.enabled = false;
-                mesh.enabled = false;
-                teleport();
+                Destroy(gameObject);
+                
             }
             else
             {
-                door_collider.enabled = true;
-                mesh.enabled = true;
+                //play err noise
+                errorAudio.Play();  
             }
         }
     }
@@ -45,15 +42,5 @@ public class validateOpen : MonoBehaviour
     {
         return (handler.getI() == i_field && handler.getJ() == j_field &&
             handler.getK() == k_field && handler.getFlag() == flag_field);
-    }
-
-    void teleport()
-    {
-        GameObject player = GameObject.Find("Minecart");
-        Debug.Log(player.transform.position);
-        float pos_x = teleportationLocationn.position.x;
-        float pos_z = teleportationLocationn.position.z;
-        player.transform.position = new Vector3(pos_x, player.transform.position.y, pos_z);
-        Debug.Log(player.transform.position);
     }
 }

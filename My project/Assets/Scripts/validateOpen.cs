@@ -14,7 +14,7 @@ public class validateOpen : MonoBehaviour
     public MeshRenderer mesh;
     public BoxCollider door_collider;
 
-    public Transform teleportationLocationn;
+    public Transform teleportationLocation;
 
     void Start()
     {
@@ -51,8 +51,8 @@ public class validateOpen : MonoBehaviour
     {
         GameObject player = GameObject.Find("Minecart");
         Debug.Log(player.transform.position);
-        float pos_x = teleportationLocationn.position.x;
-        float pos_z = teleportationLocationn.position.z;
+        float pos_x = teleportationLocation.position.x;
+        float pos_z = teleportationLocation.position.z;
         player.transform.position = new Vector3(pos_x, player.transform.position.y, pos_z);
         Debug.Log(player.transform.position);
     }

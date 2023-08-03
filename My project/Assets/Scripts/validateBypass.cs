@@ -14,6 +14,8 @@ public class validateBypass : MonoBehaviour
     public AudioSource errorAudio;
     public AudioSource successAudio;
 
+    public Transform teleportationLocation;
+
     void Start()
     {
         handler = GameObject.Find("Player").GetComponent<varHandler>();
@@ -27,8 +29,10 @@ public class validateBypass : MonoBehaviour
             Debug.Log(validateFields());
             if (validateFields())
             {
+                //animate doors opening and teleport to next loop
                 Destroy(gameObject);
-                
+                teleport();
+                            
             }
             else
             {
@@ -42,5 +46,15 @@ public class validateBypass : MonoBehaviour
     {
         return (handler.getI() == i_field && handler.getJ() == j_field &&
             handler.getK() == k_field && handler.getFlag() == flag_field);
+    }
+
+    void teleport()
+    {
+        GameObject player = GameObject.Find("Minecart");
+        Debug.Log(player.transform.position);
+        float pos_x = teleportationLocation.position.x;
+        float pos_z = teleportationLocation.position.z;
+        player.transform.position = new Vector3(pos_x, player.transform.position.y, pos_z);
+        Debug.Log(player.transform.position);
     }
 }

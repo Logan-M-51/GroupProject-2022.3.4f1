@@ -30,9 +30,10 @@ public class validateBypass : MonoBehaviour
             Debug.Log(validateFields());
             if (validateFields())
             {
+                successAudio.Play();
                 //animate doors opening and teleport to next loop
-                loopClear.clear();
-                teleport();
+                Invoke(nameof(callLoopClear), 3);
+                
                             
             }
             else
@@ -47,6 +48,12 @@ public class validateBypass : MonoBehaviour
     {
         return (handler.getI() == i_field && handler.getJ() == j_field &&
             handler.getK() == k_field && handler.getFlag() == flag_field);
+    }
+
+    void callLoopClear()
+    {
+        loopClear.clear();
+        teleport();
     }
 
     void teleport()

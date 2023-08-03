@@ -5,7 +5,7 @@ using UnityEngine;
 public class validateBypass : MonoBehaviour
 {
     varHandler handler;
-
+    clearLoop loopClear;
     public int i_field;
     public int j_field;
     public int k_field;
@@ -19,6 +19,7 @@ public class validateBypass : MonoBehaviour
     void Start()
     {
         handler = GameObject.Find("Player").GetComponent<varHandler>();
+        loopClear = gameObject.GetComponent<clearLoop>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -30,7 +31,7 @@ public class validateBypass : MonoBehaviour
             if (validateFields())
             {
                 //animate doors opening and teleport to next loop
-                Destroy(gameObject);
+                loopClear.clear();
                 teleport();
                             
             }

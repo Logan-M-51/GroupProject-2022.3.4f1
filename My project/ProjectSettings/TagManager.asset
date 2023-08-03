@@ -7,6 +7,7 @@ TagManager:
   - Red
   - Green
   - Blue
+  - loop_1
   layers:
   - Default
   - TransparentFX

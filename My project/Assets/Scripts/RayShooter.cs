@@ -42,7 +42,13 @@ public class RayShooter : MonoBehaviour
             {
                 GameObject hitObject = hit.transform.gameObject;
                 CodeView code = hitObject.GetComponent<CodeView>();
-                if (code != null)
+                WelcomeMessage msg = hitObject.GetComponent<WelcomeMessage>();
+
+                if (msg != null)
+                {
+                    msg.NextMessage();
+                    
+                } else if (code != null)
                 {
                     code.ChangeView();
 

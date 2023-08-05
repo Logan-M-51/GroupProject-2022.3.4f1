@@ -49,7 +49,7 @@ public class validateOpen : MonoBehaviour
 
     void teleport()
     {
-        GameObject player = GameObject.Find("Minecart");
+        GameObject player = GameObject.Find("Mine_Cart");
         Debug.Log(player.transform.position);
         float pos_x = teleportationLocation.position.x;
         float pos_z = teleportationLocation.position.z;

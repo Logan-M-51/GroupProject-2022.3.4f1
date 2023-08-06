@@ -10,6 +10,7 @@ TagManager:
   - loop_1
   - loop_2
   - loop_3
+  - player
   layers:
   - Default
   - TransparentFX

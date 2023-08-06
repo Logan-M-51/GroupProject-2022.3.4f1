@@ -5,6 +5,7 @@ using UnityEngine;
 public class teleportTo : MonoBehaviour
 {
     public Transform teleportationLocation;
+    private GameObject[] player_objs;
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,11 +18,13 @@ public class teleportTo : MonoBehaviour
 
     void teleport()
     {
-        GameObject player = GameObject.Find("Mine_Cart");
-        Debug.Log(player.transform.position);
-        float pos_x = teleportationLocation.position.x;
-        float pos_z = teleportationLocation.position.z;
-        player.transform.position = new Vector3(pos_x, player.transform.position.y, pos_z);
-        Debug.Log(player.transform.position);
+        player_objs = GameObject.FindGameObjectsWithTag("player");
+        foreach (GameObject obj in player_objs)
+        {
+            float pos_x = teleportationLocation.position.x;
+            float pos_z = teleportationLocation.position.z;
+            obj.transform.position = new Vector3(pos_x, obj.transform.position.y, pos_z);
+        }
+        
     }
 }

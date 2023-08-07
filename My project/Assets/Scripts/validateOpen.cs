@@ -16,9 +16,12 @@ public class validateOpen : MonoBehaviour
 
     public Transform teleportationLocation;
 
+    private SceneController controller;
+
     void Start()
     {
         handler = GameObject.Find("Player").GetComponent<varHandler>();
+        controller = GameObject.Find("Controller").GetComponent<SceneController>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -37,6 +40,7 @@ public class validateOpen : MonoBehaviour
             {
                 door_collider.enabled = true;
                 mesh.enabled = true;
+                controller.AddBug();
             }
         }
     }

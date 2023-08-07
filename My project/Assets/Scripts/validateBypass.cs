@@ -16,10 +16,13 @@ public class validateBypass : MonoBehaviour
 
     public Transform teleportationLocation;
 
+    private SceneController controller;
+
     void Start()
     {
         handler = GameObject.Find("Player").GetComponent<varHandler>();
         loopClear = gameObject.GetComponent<clearLoop>();
+        controller = GameObject.Find("Controller").GetComponent<SceneController>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -39,7 +42,8 @@ public class validateBypass : MonoBehaviour
             else
             {
                 //play err noise
-                errorAudio.Play();  
+                errorAudio.Play();
+                controller.AddBug();
             }
         }
     }

@@ -13591,7 +13591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dff023dabe68d34bb0a6e234912b4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tag: loop_1
+  tag: loop_2
 --- !u!114 &869364512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23500,7 +23500,7 @@ GameObject:
   - component: {fileID: 1552933257}
   m_Layer: 0
   m_Name: FlagToggleButton
-  m_TagString: Untagged
+  m_TagString: loop_2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

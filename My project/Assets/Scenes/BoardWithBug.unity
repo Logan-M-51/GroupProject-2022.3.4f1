@@ -9708,7 +9708,7 @@ GameObject:
   - component: {fileID: 566034628}
   m_Layer: 0
   m_Name: k-- button
-  m_TagString: loop_2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10723,7 +10723,7 @@ GameObject:
   - component: {fileID: 682040217}
   m_Layer: 0
   m_Name: FlagToggleButton
-  m_TagString: loop_3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

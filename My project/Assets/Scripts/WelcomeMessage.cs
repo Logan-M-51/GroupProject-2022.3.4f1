@@ -28,7 +28,7 @@ public class WelcomeMessage : MonoBehaviour
         messages = new string[numMsg];
 
         messages[0] = "Welcome, new recruit!\n (Tap to continue.)";
-        messages[1] = "You are tasked with the job of executing the code in front of you (look down).";
+        messages[1] = "You are tasked with the job of executing the code in front of you (look down and tap to see next loop).";
         messages[2] = "I, J, and K are variables used to keep count. You can always see their values " +
             "in the upper left corner.";
         messages[3] = "The flag is also a variable. It can be true or false.";

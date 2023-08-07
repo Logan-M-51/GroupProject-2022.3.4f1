@@ -4818,7 +4818,7 @@ MonoBehaviour:
   level: 0
   top: {fileID: 997275660}
   middle: {fileID: 335211133}
-  bottom: {fileID: 0}
+  bottom: {fileID: 1870534372}
 --- !u!64 &348314881
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6739,7 +6739,7 @@ MonoBehaviour:
   i_field: 5
   j_field: 0
   k_field: 9
-  flag_field: 1
+  flag_field: 0
   mesh: {fileID: 12307124}
   door_collider: {fileID: 12307123}
   teleportationLocation: {fileID: 610767566}
@@ -9708,7 +9708,7 @@ GameObject:
   - component: {fileID: 566034628}
   m_Layer: 0
   m_Name: k-- button
-  m_TagString: loop_1
+  m_TagString: loop_2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13610,7 +13610,7 @@ MonoBehaviour:
   flag_field: 0
   errorAudio: {fileID: 869364514}
   successAudio: {fileID: 869364513}
-  teleportationLocation: {fileID: 50521186}
+  teleportationLocation: {fileID: 1625238727}
 --- !u!82 &869364513
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15828,7 +15828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &997275661
 Transform:
   m_ObjectHideFlags: 0
@@ -24306,7 +24306,7 @@ MonoBehaviour:
   i_field: -3
   j_field: 5
   k_field: 3
-  flag_field: 1
+  flag_field: 0
   errorAudio: {fileID: 1593712278}
   successAudio: {fileID: 1593712277}
   teleportationLocation: {fileID: 1953863764}
@@ -27398,7 +27398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1870534373
 Transform:
   m_ObjectHideFlags: 0

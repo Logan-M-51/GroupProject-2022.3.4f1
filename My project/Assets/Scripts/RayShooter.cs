@@ -55,7 +55,7 @@ public class RayShooter : MonoBehaviour
                 } else
                 {
                     StartCoroutine(SphereIndicator(hit.point));
-                    Handheld.Vibrate();
+                  //  Handheld.Vibrate();
                 }
                 
             }

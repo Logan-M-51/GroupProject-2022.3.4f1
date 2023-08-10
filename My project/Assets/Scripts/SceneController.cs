@@ -47,5 +47,6 @@ public class SceneController : MonoBehaviour
         bugs[numBugs].transform.Rotate(0, angle, 0);
         numBugs += 1;
         bug_text.text = numBugs.ToString();
+        Handheld.Vibrate();
     }
 }

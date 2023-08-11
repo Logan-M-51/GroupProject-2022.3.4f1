@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.067733765, g: 0.15387174, b: 0.059496313, a: 1}
+  m_IndirectSpecularColor: {r: 0.06615649, g: 0.15344906, b: 0.0577884, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4862,8 +4862,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hit The ''RESTART GAME'' button to try the puzzles again and creating
-    less bugs!
+  m_text: 'Hit The ''RESTART GAME'' button to try the puzzles again. Use what you
+    have learned to complete all the challenges without creating any bugs!
 
 '
   m_isRightToLeft: 0
